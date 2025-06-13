@@ -188,3 +188,293 @@
     </body>
     
 </html>
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', Georgia;
+
+}
+h1 {
+    text-align: center;
+    text-decoration: wavy;
+    font-size: 4rem;
+    font-weight: 700;
+    
+}
+h4{
+    text-align: center;
+    text-decoration:wavy;
+    color: rgb(61, 5, 41);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  padding: 50px;
+  border-radius: 45px;
+   
+}
+
+
+body {
+  background-color: lightpink;
+  background-image: url('hrt.jpg');
+  
+
+}
+.pink-btn {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    image-rendering: pixelated;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    margin: 0 auto; /* Center the button */
+    display: block; /* Needed for margin auto to work */
+}
+
+.pink-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+}
+
+.pink-btn:active {
+    transform: translateY(2px);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.pink-btn::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 12px;
+    animation: pulse 2s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pink-btn:hover::before {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+h5{
+  color:#d63384;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  padding: 50px;
+  border-radius: 45px;
+  text-align: center;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Forgive Me?</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #ffebf3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff66b2;
+            text-shadow: 3px 3px 0 #fff;
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            image-rendering: pixelated;
+            position: relative;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        .btn-yes {
+            background-color: #ff66b2;
+            color: white;
+            border: 4px solid #ff3385;
+        }
+
+        .btn-no {
+            background-color: #ffb6e6;
+            color: #ff3385;
+            border: 4px solid #ff66b2;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 0;
+            color: #ff3385;
+            opacity: 0;
+            transition: all 1s;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .heart.show {
+            font-size: 120px;
+            opacity: 1;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .pixel {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff66b2;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes confetti {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) rotate(360deg); opacity: 0; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Will you forgive me?</h1>
+    
+    <div class="buttons-container">
+        <button class="btn btn-yes" id="yesBtn">YES</button>
+        <button class="btn btn-no" id="noBtn">NO</button>
+    </div>
+    
+    <div class="heart" id="heart">❤</div>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const heart = document.getElementById('heart');
+        
+        let yesSize = 1;
+        let noSize = 1;
+        
+        noBtn.addEventListener('click', function(e) {
+            // Increase YES button size
+            yesSize += 0.2;
+            yesBtn.style.transform = `scale(${yesSize})`;
+            
+            // Decrease NO button size
+            noSize = Math.max(0.3, noSize - 0.1);
+            noBtn.style.transform = `scale(${noSize})`;
+            
+            // Move NO button randomly to make it harder to click
+            const x = Math.random() * 100 - 50;
+            const y = Math.random() * 100 - 50;
+            noBtn.style.transform = `scale(${noSize}) translate(${x}px, ${y}px)`;
+            
+            e.preventDefault();
+        });
+        
+        yesBtn.addEventListener('click', function() {
+            // Show big heart
+            heart.classList.add('show');
+            
+            // Create confetti effect
+            createConfetti();
+            
+            // Hide buttons
+            yesBtn.style.display = 'none';
+            noBtn.style.display = 'none';
+            
+            // Update text
+            document.querySelector('h1').textContent = 'Thank you! ❤';
+        });
+        
+        function createConfetti() {
+            for (let i = 0; i < 50; i++) {
+                const pixel = document.createElement('div');
+                pixel.classList.add('pixel');
+                
+                // Random position
+                const startX = Math.random() * window.innerWidth;
+                const startY = Math.random() * window.innerHeight/2;
+                
+                // Random color
+                const colors = ['#ff66b2', '#ff3385', '#ffb6e6', '#ff8ac6'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Random size
+                const size = Math.random() * 10 + 5;
+                
+                // Set styles
+                pixel.style.left = `${startX}px`;
+                pixel.style.top = `${startY}px`;
+                pixel.style.backgroundColor = color;
+                pixel.style.width = `${size}px`;
+                pixel.style.height = `${size}px`;
+                
+                // Random animation
+                const tx = (Math.random() - 0.5) * 200;
+                const ty = Math.random() * 200 + 100;
+                pixel.style.setProperty('--tx', `${tx}px`);
+                pixel.style.setProperty('--ty', `${ty}px`);
+                pixel.style.animation = `confetti ${Math.random() * 2 + 1}s forwards`;
+                
+                document.body.appendChild(pixel);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    pixel.remove();
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

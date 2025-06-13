@@ -1,0 +1,95 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', Georgia;
+
+}
+h1 {
+    text-align: center;
+    text-decoration: wavy;
+    font-size: 4rem;
+    font-weight: 700;
+    
+}
+h4{
+    text-align: center;
+    text-decoration:wavy;
+    color: rgb(61, 5, 41);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  padding: 50px;
+  border-radius: 45px;
+   
+}
+
+
+body {
+  background-color: lightpink;
+  background-image: url('hrt.jpg');
+  
+
+}
+.pink-btn {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    image-rendering: pixelated;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    margin: 0 auto; /* Center the button */
+    display: block; /* Needed for margin auto to work */
+}
+
+.pink-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+}
+
+.pink-btn:active {
+    transform: translateY(2px);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.pink-btn::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 12px;
+    animation: pulse 2s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pink-btn:hover::before {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+h5{
+  color:#d63384;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  padding: 50px;
+  border-radius: 45px;
+  text-align: center;
+
+}

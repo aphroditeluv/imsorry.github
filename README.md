@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name ="viewport" content = "width=device-width, initial scale = 1.0" />
+        <title>lvl.1910</title>
+        <link rel ="stylesheet" href="gore.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>
+            <br>💕hello my princess💕 
+            <br>
+            <br>
+        </h1>
+        <h4> 
+            I know you're upset with me, and i understand, i made a mistake.<br>
+            But trust me i never intended to make you feel disappointed,<br>
+            because i care for you this much 🌍<br>
+            I really really hate making you upset, it feels like physical pain to me every<br>
+            time i disappoint you in any way, no matter how big or small. 😞
+            And believe me <br>
+            I really didn't know that me sending that stupid wish <br>
+            would upset you so much, and because it didn't mean anything to me<br>
+            I really did not see this coming princess 💔<br>
+        </h4>
+        
+<div class="pixel-puppy">
+  <div class="puppy-speech">You mean the whole world to me<br>I will give you all my treats! <br> and right now i am heartcrushed</div>
+  <div class="puppy-body"></div>
+  <div class="puppy-head">
+    <div class="puppy-ear left"></div>
+    <div class="puppy-ear right"></div>
+    <div class="puppy-eye left"></div>
+    <div class="puppy-eye right"></div>
+    <div class="puppy-nose"></div>
+    <div class="puppy-mouth"></div>
+  </div>
+  <div class="puppy-tail"></div>
+</div>
 
+<style>
+/* Add this to your existing CSS */
+.pixel-puppy {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 30px auto;
+  image-rendering: pixelated;
+}
+
+.puppy-speech {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid #ff66b2;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  line-height: 1.4;
+  width: 180px;
+  text-align: center;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  animation: float 2s ease-in-out infinite;
+}
+
+.puppy-body {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background: #ffb6e6;
+  border-radius: 20px;
+  top: 40px;
+  left: 20px;
+  border: 3px solid #ff66b2;
+}
+
+.puppy-head {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  background: #ffb6e6;
+  border-radius: 25px 25px 20px 20px;
+  top: 20px;
+  left: 30px;
+  border: 3px solid #ff66b2;
+  z-index: 2;
+  animation: tilt 2s ease-in-out infinite;
+}
+
+.puppy-ear {
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background: #ff8ac6;
+  border: 3px solid #ff66b2;
+  border-radius: 10px;
+  top: -10px;
+}
+
+.puppy-ear.left {
+  left: 5px;
+  transform: rotate(-30deg);
+}
+
+.puppy-ear.right {
+  right: 5px;
+  transform: rotate(30deg);
+}
+
+.puppy-eye {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.puppy-eye.left { left: 15px; }
+.puppy-eye.right { right: 15px; }
+
+.puppy-nose {
+  position: absolute;
+  width: 10px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.puppy-mouth {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border-bottom: 2px solid #333;
+  border-radius: 0 0 10px 10px;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.puppy-tail {
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background: #ff8ac6;
+  border: 3px solid #ff66b2;
+  border-radius: 10px;
+  top: 30px;
+  right: 10px;
+  transform: rotate(30deg);
+  animation: wag 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes tilt {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes wag {
+  0% { transform: rotate(30deg); }
+  100% { transform: rotate(60deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -5px); }
+  50% { transform: translate(-50%, 5px); }
+}
+
+
+
+</style>
+
+<h5> i'm sorry i know this website is not good enough but i really tried and i really miss you. 
+    <br>
+    and if you don't reply to this I'll accept that you hate me now onwards.
+</h5>
+<br>
+<button class="pink-btn" onclick="window.location.href='cute.html'">click here sweetie</button>
+
+    
+    </body>
+    
+</html>
